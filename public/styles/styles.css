@@ -1,0 +1,134 @@
+#a {
+  min-width: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.archive {
+  width: 60%;
+}
+
+#archive {
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+}
+
+.btn {
+  color: white;
+}
+
+.face {
+  font-size: 30pt;
+}
+
+.footer {
+  min-width: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.form-group {
+  color: black;
+} 
+
+h1, h5, p {
+  color: black;
+}
+
+#insight, #title {
+  height: 110px;
+  overflow: scroll;
+}
+
+.jumbotron {
+  color: black;
+  opacity: 0.70;
+  width: 80%;
+}
+
+.nav-item {
+  color: black;
+} 
+
+#resultsCard {
+  display: inline-block;
+  height: 55vh;
+}
+
+#surprise {
+  bottom: -350vh;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+#textCard {
+  display: inline-block;
+  margin-right: 5%;
+  width: 40%;
+}
+
+.wrapper {
+  height: 100vh;
+  perspective: 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: white;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15%;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.static {
+  background-image: url("/images/static.jpg");
+}
+
+.bg1::after {
+  background-image: url("/images/background.jpg");
+}
+
+.bg2::after {
+  background-image: url("/images/background.jpg");
+}
+
+/* .sign-in {
+ width: 200px;
+} */
+
+.google {
+  width: 20px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+  .parallax::after {
+     background-size: 160%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .parallax::after  {
+    background-size: 200%;
+  }
+}

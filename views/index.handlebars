@@ -1,0 +1,100 @@
+<main class="wrapper">
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#form" class="nav-link button">Form</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#archive" id="button1" class="nav-link">Archive</a>
+                </li>
+                <li class="nav-item sign-in">
+                    <p class="nav-link"><span id="signed-in"></span></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section parallax bg1">
+
+        <div class="jumbotron">
+            <h1 class="animated bounceInDown">Is this legit?</h1>
+             <i class="animated bounceInDown em em-thinking_face face"></i>
+            <p class="lead">
+                The internet is awash with misleading articles and information. We have all sat there wondering if the
+                web page you're reading is indeed legitimate and therefore trustworthy. Wouldn't it be nice to know the
+                motivations behind the source that you're reading? Well you're in luck! Enter the text in question and
+                marvel as the author's intentions come to light!
+            </p>
+            <p class="lead">
+                <a href="#form" class="btn btn-secondary btn-lg button animated bounceInUp" role="button">Take Me
+                    There!</a>
+            </p>
+        </div>
+        </div>
+
+    </section>
+
+    <section id="form" class="section parallax static">
+
+        <div class="card" id="textCard">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="text">Enter Text Here</label>
+                        <textarea class="form-control" id="text" rows="10"></textarea>
+                        <br>
+                        <button id="submit" type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+       <div class="card" id="resultsCard">
+            <div class="card-body">
+                <h5>Results:</h5>
+                <p>Adult Content Detection: <span id="adult">{{adult}}</span></p>
+                <p>Commercial Detection: <span id="comm">{{comm}}</span></p>
+                <p>Sentiment Analysis: <span id="senti">{{senti}}</span></p>
+                <p>Subjective Analysis: <span id="sub">{{sub}}</span></p>
+                <p>Top Classification: <span id="topic">{{topic}}</span></p>
+                <form>
+                    <div class="form-group">
+                        <label for="titleName">Title:</label>
+                        <textarea class="form-control" id="titleName" rows="1"></textarea>
+                        <br>
+                        <button id="saveds" class="btn btn-secondary saveds">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="archive" class="section parallax bg2">
+
+        <h1 id="a">Archive</h1>
+        <div class="card archive">
+            {{#each saveds}}
+            <div class="card-body">
+                <h5><span id="title">{{this.article_name}}</span></h5>
+                <p><span class="datum">{{this.topic}}, {{this.subjectivity}}, {{this.sentiment}}, {{this.commercial}}, {{this.adult}}</span></p>
+                <p id="insight">{{this.text}}</p>
+                
+                <button type="delete"  class="delete btn btn-secondary" data-id="{{id}}">Delete</button>
+            </div>
+            {{/each}}
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p>Created By: Cara Adelson, Jacob Artz, Jamie DeHaan, Stephen Michael & Tyler Winstead</p>
+            </div>
+        </footer>
+
+    </section>
+
+    <p id="surprise">You're a little too scroll happy for your own good!</p>
+
+</main>
